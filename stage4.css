@@ -1,0 +1,271 @@
+@font-face {
+  font-family: 'Ownglyph_ParkDaHyun';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+margin: 0;
+background-color: #fff8e6;
+font-family: 'Ownglyph_ParkDaHyun', sans-serif;
+height: 100vh;
+}
+
+.stage-container {
+min-height: 100vh;
+width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.stage-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+gap: 10px;
+}
+
+.stage-title {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 18px 50px;
+  font-size: 35px;
+  border-radius: 100px;
+  border: 4px solid #000;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#game-canvas {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.info-panel {
+position: fixed;
+top: 120px;
+right: 100px;
+display: flex;
+flex-direction: column;
+gap: 40px;
+z-index: 10;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 18px 0;
+  min-width: 160px;
+  text-align: center;
+  font-size: 26px;
+  border-radius: 4px;
+}
+
+.modal-overlay {
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+width: 100vw; height: 100vh;
+background: rgba(0,0,0,0.4);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 64px 64px 40px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 600px;
+  min-height: 550px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.intro-image {
+  max-width: 500px;
+  max-height: 440px;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+.arrow-image {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.arrow-image:hover {
+  transform: scale(1.1);
+}
+
+.left-arrow {
+  /* 회전 설정 제거 */
+}
+
+.right-arrow {
+  /* 오른쪽 화살표는 기본 방향 유지 */
+}
+
+#skip-btn {
+  background: #71adfa;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 32px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-family: 'Ownglyph_ParkDaHyun', sans-serif;
+
+}
+#skip-btn:hover {
+  border: 2px solid #5b7fe7;
+  background-color: #fff;
+  color: #71adfa;
+}
+
+.time-remaining {
+font-size: 36px;
+color: #222;
+text-align: center;
+margin-top: 8px;
+margin-bottom: 32px;
+font-weight: bold;
+}
+
+#clear-modal .modal-content {
+min-width: 500px;
+min-height: 350px;
+padding: 48px 32px 32px 32px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.clear-title {
+  font-size: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #efab6a;
+}
+
+
+#clear-modal button {
+  border-radius: 10px;
+  padding: 16px 40px;
+  font-size: 26px;
+  margin: 16px 0;
+  min-width: 200px;
+  font-family: 'Ownglyph_ParkDaHyun', sans-serif;
+}
+
+.clear-score-btn {
+  background: #fff;
+  border: 4px solid #efab6a;
+  color: #3f3831;
+}
+
+.clear-next-btn {
+  background: #71adfa;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.clear-next-btn:hover {
+  border: 2px solid #5b7fe7;
+  background-color: #fff;
+  color: #71adfa;
+}
+
+.clear-home-btn {
+  background: #71adfa;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.clear-home-btn:hover {
+  border: 2px solid #5b7fe7;
+  background-color: #fff;
+  color: #71adfa;
+}
+
+/* game-end-modal 스타일 */
+#game-end-modal .modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 64px 64px 40px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 600px;
+  min-height: 550px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+#game-end-modal .intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+#game-end-modal .intro-image {
+  max-width: 500px;
+  max-height: 440px;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+#game-end-modal .arrow-image {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#game-end-modal .arrow-image:hover {
+  transform: scale(1.1);
+}
+
+#game-end-modal #skip-btn {
+  background: #71adfa;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 32px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-family: 'Ownglyph_ParkDaHyun', sans-serif;
+}
+
+#game-end-modal #skip-btn:hover {
+  border: 2px solid #5b7fe7;
+  background-color: #fff;
+  color: #71adfa;
+}

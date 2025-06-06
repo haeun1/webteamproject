@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Stage 3</title>
+        <link rel="stylesheet" href="stage3.css" />
+    </head>
+    <body>
+        <audio id="bgm" loop preload="auto">
+            <source src="bgm/stage3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="stage-container">
+            <div class="stage-content">
+                <div class="stage-title">Stage 3</div>
+                <canvas id="game-canvas" width="800" height="600"></canvas>
+            </div>
+            <div class="info-panel">
+                <div class="info-box" id="time-box">제한 시간</div>
+                <div id="time-remaining" class="time-remaining">30</div>
+                <div class="info-box" id="score-box">점수</div>
+            </div>
+            <!-- 인트로 팝업 모달 -->
+            <div id="intro-modal" class="modal-overlay" style="display: none">
+                <div class="modal-content">
+                    <div class="intro-container">
+                        <img src="scenes_images/left_arrow.png" alt="왼쪽 화살표" class="arrow-image left-arrow" />
+                        <img src="scenes_images/stage3_1.png" alt="인트로 이미지" class="intro-image" />
+                        <img src="scenes_images/right_arrow.png" alt="오른쪽 화살표" class="arrow-image right-arrow" />
+                    </div>
+                    <button id="skip-btn">SKIP</button>
+                </div>
+            </div>
+            <!-- 스테이지 클리어 팝업 -->
+            <div id="clear-modal" class="modal-overlay" style="display: none">
+                <div class="modal-content">
+                    <div class="clear-title">스테이지 클리어!</div>
+                    <button class="clear-score-btn">점수</button>
+                    <button class="clear-next-btn">다음 스테이지로</button>
+                    <button class="clear-home-btn">홈으로</button>
+                </div>
+            </div>
+            <!-- 게임 종료 팝업 -->
+            <div id="game-end-modal" class="modal-overlay" style="display: none">
+                <div class="modal-content">
+                    <div class="intro-container">
+                        <img src="scenes_images/left_arrow.png" alt="왼쪽 화살표" class="arrow-image left-arrow" />
+                        <img src="scenes_images/stage3_end_1.png" alt="게임 종료 이미지" class="intro-image" />
+                        <img src="scenes_images/right_arrow.png" alt="오른쪽 화살표" class="arrow-image right-arrow" />
+                    </div>
+                    <button id="skip-btn">SKIP</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="game3.js"></script>
+        <script src="stage3.js"></script>
+    </body>
+</html>

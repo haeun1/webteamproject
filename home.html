@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>홈화면</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="home.js" defer></script>
+</head>
+<body>
+  <audio id="bgm" autoplay loop preload="auto" playsinline>
+    <source src="bgm/home.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="container">
+    <div class="main">
+      <div class="logo">
+        <img src="images/logo.PNG" alt="로고">
+      </div>
+      <button id="startBtn">게임 시작</button>
+      <button id="themeBtn">테마 변경</button>
+    </div>
+  </div>
+
+  <!-- 스테이지 선택 모달 -->
+  <div id="stageModal" class="modal-overlay" style="display: none;">
+    <div class="modal stage-modal">
+      <button class="modal-close">✕</button>
+      <h2 class="modal-title">난이도</h2>
+      <div class="stage-list">
+        <div class="stage-item" data-stage="1">
+          <span class="stage-name">스테이지 1</span>
+          <span class="stage-status">→</span>
+        </div>
+        <div class="stage-item" data-stage="2">
+          <span class="stage-name">스테이지 2</span>
+          <span class="stage-arrow">→</span>
+        </div>
+        <div class="stage-item" data-stage="3">
+          <span class="stage-name">스테이지 3</span>
+          <span class="stage-arrow">→</span>
+        </div>
+        <div class="stage-item" data-stage="4">
+          <span class="stage-name">스테이지 4</span>
+          <span class="stage-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 테마 선택 모달 -->
+  <div id="themeModal" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <button class="modal-close">✕</button>
+      <h2 class="modal-title">테마 선택</h2>
+      
+      <div class="theme-section">
+        <h3 class="theme-title">인테리어</h3>
+        <div class="theme-options">
+          <div class="theme-option" data-theme="interior1">
+            <img src="images/interior1.jpg" alt="모던한 인테리어">
+          </div>
+          <div class="theme-option" data-theme="interior2">
+            <img src="images/interior2.jpg" alt="클래식한 인테리어">
+          </div>
+          <div class="theme-option" data-theme="interior3">
+            <img src="images/interior3.jpg" alt="미니멀한 인테리어">
+          </div>
+        </div>
+      </div>
+
+      <div class="theme-section">
+        <h3 class="theme-title">냥실이</h3>
+        <div class="theme-options">
+          <div class="theme-option" data-theme="cat1">
+            <img src="images/select_cat1.jpg" alt="귀여운 고양이">
+          </div>
+          <div class="theme-option" data-theme="cat2">
+            <img src="images/select_cat2.jpg" alt="장난스러운 고양이">
+          </div>
+          <div class="theme-option" data-theme="cat3">
+            <img src="images/select_cat3.jpg" alt="우아한 고양이">
+          </div>
+        </div>
+      </div>
+      <button id="themeConfirmBtn" disabled>확인</button>
+    </div>
+  </div>
+</body>
+</html>
