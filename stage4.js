@@ -192,7 +192,7 @@ function initImages() {
     // 패들 이미지 로드 (hand.PNG)
     handImg.onload = checkImagesLoaded;
     handImg.onerror = () => handleImageError(handImg, "손");
-    handImg.src = "./images/hand.PNG";
+    handImg.src = "./images/hand.png";
     
     // 공 이미지 로드 (선택된 테마에 따라 하나의 공 이미지만 사용)
     let ballImageIndex = 1; // 기본값
